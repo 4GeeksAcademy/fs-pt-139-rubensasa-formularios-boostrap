@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bootstrap Formulario</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+    integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+</head>
+
+<body>
+  <div class="container">
+
+    <div class="bg-white rounded shadow border overflow-hidden mt-5">
+
+      <div class="bg-secondary bg-opacity-10 p-3">
+        <h2 class="mb-3">Ejemplo de pago</h2>
+      </div>
+
+      <div class="p-4">
+        <form action="" method="post">
+          <div id="mensajeError" class="alert alert-danger">
+            <i class="fas fa-exclamation-triangle"></i> Algunos campos estan vacios.
+          </div>
+
+          <div class="row mb-3">
+
+            <div class="col-md-5">
+              <label for="tarjeta" class="form-label">Card #</label>
+              <input type="text" id="tarjeta" name="tarjeta" class="form-control" placeholder="XXXX-XXXX-XXXX-XXXX">
+            </div>
+
+            <div class="col-md-3">
+              <label for="cvc" class="form-label">CVC</label>
+              <input type="text" id="cvc" name="cvc" class="form-control" placeholder="CVC">
+            </div>
+
+            <div class="col-md-4">
+              <label for="cantidad" class="form-label">amount</label>
+              <div class="input-group">
+                <span class="input-group-text">$</span>
+                <input type="text" id="cantidad" name="cantidad" class="form-control" placeholder="0.00">
+              </div>
+            </div>
+
+          </div>
+
+          <!-- fila de nombre -->
+          <div class="row mb-3">
+            <div class="col-md-6">
+              <label for="nombre" class="form-label">Nombre</label>
+              <input type="text" id="nombre" name="nombre" class="form-control" placeholder="Nombre">
+            </div>
+
+            <div class="col-md-6">
+              <label for="apellido" class="form-label">Apellidos</label>
+              <input type="text" id="apellido" name="apellido" class="form-control" placeholder="Apellidos">
+            </div>
+          </div>
+
+          <!-- direccion -->
+
+          <div class="row mb-3">
+
+            <div class="col-md-5">
+              <label for="ciudad" class="form-label">ciudad</label>
+              <input type="text" id="ciudad" name="ciudad" class="form-control" placeholder="Ciudad">
+            </div>
+
+            <div class="col-md-4">
+              <label for="estado" class="form-label">Estado</label>
+              <select class="form-select" id="estado" name="estado" class="form-control" placeholder="Estado">
+                <option selected disabled value="">Seleccione estado</option>
+                <option>Valencia</option>
+                <option>Madrid</option>
+                <option>Barcelona</option>
+                <option>Sevilla</option>
+                <option>Bilbao</option>
+                <option>Granada</option>
+              </select>
+            </div>
+
+            <div class="col-md-3">
+              <label for="cp" class="form-label">Codigo Postal</label>
+              <input type="text" id="cp" name="cp" class="form-control" placeholder="Codigo Postal">
+            </div>
+          </div>
+
+          <!-- formas de pago con check -->
+
+          <div class="row mb-4">
+            <div class="col-md-5">
+              <label class="form-label">Formas de pago</label>
+              <div class="d-flex align-items-center gap-3">
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" value="mastercard" id="mc" name="tipoTarjeta">
+                  <label class="form-check-label" for="mastercard">
+                    <i class="fa-brands fa-cc-mastercard fa-2x"></i>
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" value="visa" id="visa" name="tipoTarjeta">
+                  <label class="form-check-label" for="visa">
+                    <i class="fa-brands fa-cc-visa fa-2x"></i>
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="radio" value="Paypal" id="paypal" name="tipoTarjeta">
+                  <label class="form-check-label" for="paypal">
+                    <i class="fa-brands fa-cc-paypal fa-2x"></i>
+                  </label>
+                </div>
+              </div>
+            </div>
+
+
+            <div class="col-md-7">
+              <label for="mensaje" class="form-label">Mensaje</label>
+              <textarea class="form-control" id="mensaje" rows="3"></textarea>
+            </div>
+          </div>
+
+        </form>
+      </div>
+      <div class="bg-secondary bg-opacity-10 p-3 d-flex justify-content-end gap-2">
+        <button type="reset" form="formulario" class="btn btn-secondary">Cancel</button>
+        <button type="submit" form="formulario" class="btn btn-primary">Send</button>
+      </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>
